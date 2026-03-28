@@ -908,15 +908,15 @@ details[open] .faq__question::after {
     height: 56vh;
     max-height: 400px;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: 15% 30%;
     display: block;
   }
 
   .hero__mobile-logo {
     position: absolute;
-    top: 16px;
+    top: 30%;
     left: 16px;
-    width: 180px;
+    width: 210px;
     height: auto !important;
     max-height: none !important;
     object-fit: contain !important;
