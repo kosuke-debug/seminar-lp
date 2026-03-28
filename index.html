@@ -9,6 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1244808384227110');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1244808384227110&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -23,7 +40,7 @@
         <a href="#overview">開催概要</a>
         <a href="#apply">申込方法</a>
       </nav>
-      <a href="https://lin.ee/Wg2IzTt" class="btn btn--orange btn--sm">今すぐ申し込む</a>
+      <a href="https://lin.ee/Wg2IzTt" class="btn btn--orange btn--sm" onclick="fbq('track','Lead');">今すぐ申し込む</a>
       <button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -46,7 +63,7 @@
       <div class="hero__cta-band">
         <div class="container">
           <p class="hero__cta-price">参加費 <span class="em-red">いまだけ500円！</span>（税込）</p>
-          <a href="https://lin.ee/Wg2IzTt" class="btn btn--orange btn--lg">参加申込はこちら</a>
+          <a href="https://lin.ee/Wg2IzTt" class="btn btn--orange btn--lg" onclick="fbq('track','Lead');">参加申込はこちら</a>
           <p class="hero__cta-note">公式LINEの申し込みフォームよりご予約ください。</p>
         </div>
       </div>
@@ -259,7 +276,7 @@
           <p><span class="em-yellow">参加費 500円</span> ／ <span class="em-yellow">定員10名</span></p>
         </div>
         <div class="cta">
-          <a href="https://lin.ee/Wg2IzTt" class="btn btn--orange btn--lg">LINE登録して申し込む</a>
+          <a href="https://lin.ee/Wg2IzTt" class="btn btn--orange btn--lg" onclick="fbq('track','Lead');">LINE登録して申し込む</a>
           <p class="cta__note cta__note--white">公式LINEから30秒で申し込み完了。<br>参加費500円は当日会場でのお支払いです。<br>ご不明な点はLINEでお気軽にご質問ください。</p>
         </div>
       </div>
