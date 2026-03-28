@@ -913,6 +913,7 @@ details[open] .faq__question::after {
   }
 
   .hero__mobile-overlay {
+    display: flex;
     position: absolute;
     inset: 0;
     background: linear-gradient(
@@ -927,6 +928,7 @@ details[open] .faq__question::after {
   }
 
   .hero__mobile-title {
+    display: block;
     color: #fff;
     font-size: 24px;
     font-weight: 700;
