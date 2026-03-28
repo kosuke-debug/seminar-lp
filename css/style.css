@@ -264,6 +264,11 @@ a {
   border-radius: 8px;
 }
 
+/* Hero mobile image (hidden on PC, shown on SP) */
+.hero__mobile-img {
+  display: none;
+}
+
 /* Hero CTA Band */
 .hero__cta-band {
   position: relative;
@@ -850,14 +855,6 @@ details[open] .faq__question::after {
     text-align: left;
   }
 
-  .hero__overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 253, 249, 0.92) 0%,
-      rgba(255, 253, 249, 0.7) 60%,
-      rgba(255, 253, 249, 0.5) 100%
-    );
-  }
 }
 
 @media (max-width: 767px) {
@@ -883,30 +880,50 @@ details[open] .faq__question::after {
 
   .hero {
     min-height: auto;
-    background-size: cover;
-    background-position: center;
+    background-image: none !important;
+  }
+
+  .hero__overlay {
+    display: none;
+  }
+
+  .hero__mobile-img {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero__mobile-img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
   }
 
   .hero__content {
-    padding: 40px 0 24px;
+    padding: 28px 0 20px;
+    background: var(--color-bg-white);
   }
 
   .hero__text-area {
     padding: 0 20px;
+    text-align: center;
   }
 
   .hero__title {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.55;
     margin-bottom: 20px;
   }
 
   .hero__logo {
     max-width: 280px;
+    margin: 0 auto 16px;
   }
 
   .hero__date {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .hero__cta-band {
@@ -932,19 +949,26 @@ details[open] .faq__question::after {
 
   .benefit-card {
     padding: 24px 20px;
-    gap: 14px;
+    flex-wrap: wrap;
+    gap: 0;
   }
 
   .benefit-card__num {
-    font-size: 28px;
+    font-size: 26px;
+    margin-right: 10px;
+    flex-shrink: 0;
   }
 
   .benefit-card__title {
-    font-size: 20px;
+    font-size: 19px;
+    flex: 1;
+    min-width: 0;
   }
 
   .benefit-card__text {
-    font-size: 17px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 12px;
   }
 
   .checklist__item {
@@ -952,14 +976,31 @@ details[open] .faq__question::after {
     padding: 14px 0 14px 36px;
   }
 
+  .overview-table,
+  .overview-table tbody,
+  .overview-table tr,
   .overview-table th,
   .overview-table td {
-    padding: 12px 14px;
-    font-size: 16px;
+    display: block;
+    width: 100%;
+  }
+
+  .overview-table tr {
+    border-bottom: 1px solid var(--color-border);
+    padding: 12px 0;
   }
 
   .overview-table th {
-    width: 100px;
+    padding: 0 14px 4px;
+    font-size: 15px;
+    background: none;
+    border-bottom: none;
+  }
+
+  .overview-table td {
+    padding: 0 14px;
+    font-size: 16px;
+    border-bottom: none;
   }
 
   .timeline {
