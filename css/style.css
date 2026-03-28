@@ -908,7 +908,7 @@ details[open] .faq__question::after {
     height: 56vh;
     max-height: 400px;
     object-fit: cover;
-    object-position: 15% 30%;
+    object-position: 75% 30%;
     display: block;
   }
 
